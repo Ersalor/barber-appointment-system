@@ -9,6 +9,7 @@ public class Service {
     }
 
     public Long getId() {
+
         return id;
     }
 
@@ -34,5 +35,9 @@ public class Service {
 
     public int getDuration(){
         return duration;
+    }
+    @Override
+    public String toString(){
+        return id + "-" + "-" + price + "TL" + "-" + duration+ "min";
     }
 }

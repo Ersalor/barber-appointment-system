@@ -53,4 +53,9 @@ public class User {
     public Role getRole(){
         return role;
     }
+
+    @Override
+    public String toString(){
+        return id + "-" + name + "-" + surname + "-" + phone + "-" + role;
+    }
 }

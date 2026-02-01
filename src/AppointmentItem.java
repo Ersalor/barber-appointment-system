@@ -38,4 +38,9 @@ public class AppointmentItem {
     public Integer getPriceAtAppointment() {
         return priceAtAppointment;
     }
+
+    @Override
+    public String toString(){
+        return id + "-" + service.getName() + "-" + priceAtAppointment + "TL";
+    }
 }

@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.time.LocalDateTime;
+
 public class Appointment {
     private Long id;
     private User customer;
@@ -60,7 +61,6 @@ public class Appointment {
         this.totalPrice = totalMoney;
         this.endTime = this.startTime.plusMinutes(totalDurationMinutes);
 
-        System.out.println("Bitiş saati: " + getEndTime() + " ," + "Toplam : " + getTotalPrice() + "TL");
     }
 
     public LocalDateTime getEndTime(){
@@ -69,5 +69,11 @@ public class Appointment {
 
     public Integer getTotalPrice() {
         return totalPrice;
+    }
+
+    @Override
+    public String toString(){
+        return id + " - " + "{" + items + "}" + " - " + "Start:" + startTime + " - " + "End:" + endTime
+                + " Total: " + totalPrice + "TL";
     }
 }
